@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Led Strip Controller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px; /* Khoảng cách giữa các nút */
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+        .input-group input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .checkbox-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .checkbox-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <label for="brightness">Brightness:</label>
+            <input type="number" id="brightness" placeholder="Brightness">
+        </div>
+        <!-- <div class="input-group">
+            <label for="speed">Speed:</label>
+            <input type="number" id="speed" placeholder="Speed">
+        </div> -->
+        <div class="input-group">
+            <label for="leds">LEDs:</label>
+            <input type="number" id="leds" placeholder="LEDs">
+        </div>
+        <div class="buttons">
+            <button onclick="sendInputData()">Apply Config</button>
+            <button onclick="sendLeds()">Set LEDs</button>
+        </div>
+    </div>
+
+    <script>
+        function sendData(action) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/" + action, true);
+            xhr.send();
+        }
+        function sendInputData() {
+          var brightness = document.getElementById('brightness').value;
+          //var speed = document.getElementById('speed').value;
+          var xhr = new XMLHttpRequest();
+          //xhr.open("GET", "/inputs?brightness=" + brightness + "&speed=" + speed+ "&leds=" + leds, true);
+          xhr.open("GET", "/inputs?brightness=" + brightness, true);
+          
+          xhr.send();
+        }
+        function sendLeds() {
+          var Leds = document.getElementById('leds').value;
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", "/setLeds?leds=" + Leds, true);
+          xhr.send();
+        }
+    </script>
+</body>
+</html>
