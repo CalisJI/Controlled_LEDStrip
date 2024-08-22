@@ -277,7 +277,7 @@ void loop() {
   if (packetSize) {
       int len = udp.read(incomingPacket, MAX_UDP_SIZE);
 
-      Serial.println(len);
+      //Serial.println(len);
       if (len > 0) {
           receivePixels(incomingPacket, len);
       }
