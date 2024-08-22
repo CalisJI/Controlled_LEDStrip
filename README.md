@@ -4,4 +4,4 @@
 LED number = array size
 
 ### LED Settings:
-![](/img/led1.jpg, "Led Setting Page")
+![](/img/led1.jpg)
