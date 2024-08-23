@@ -1,8 +1,9 @@
 # Project to controll LED Strip useing ESP32 via UPD protocol
 ### Data frame RGB565:
 `uint16_t[]` ex: `[0xF800, 0x07E0, 0x001F, ...] hoặc [64896, 2016, 31, ...]`
-Led Number set by array's size
 
++ Led Number set by array's size
++ LED's color set by item value
 ### LED Settings:
 ![](/img/led1.jpg)
 - LEDs: Set LED number
