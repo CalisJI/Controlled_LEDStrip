@@ -59,3 +59,6 @@ if __name__ == "__main__":
     # Gửi dữ liệu qua UDP với kích thước khối 1450 byte
     send_data_via_udp(ESP32_IP, ESP32_PORT, colors, CHUNK_SIZE)
 ```
+
+# References:
+**FastLED**: https://github.com/FastLED/FastLED
