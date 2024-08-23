@@ -1,4 +1,4 @@
-# Project to controll LED Strip useing ESP32 via UPD protocol
+# Project to controll LED Strip using ESP32 via UPD protocol
 ### Data frame RGB565:
 `uint16_t[]` ex: `[0xF800, 0x07E0, 0x001F, ...] hoặc [64896, 2016, 31, ...]`
 
