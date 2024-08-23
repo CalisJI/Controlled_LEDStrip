@@ -1,12 +1,15 @@
 # Project to controll LED Strip useing ESP32 via UPD protocol
 ### Data frame RGB565:
 `uint16_t[]` ex: `[0xF800, 0x07E0, 0x001F, ...] hoặc [64896, 2016, 31, ...]`
-LED number = array size
+Led Number set by array's size
 
 ### LED Settings:
 ![](/img/led1.jpg)
 - LEDs: Set LED number
 - Brightness: Set LED brightness
+- IP Address: default: 192.168.1.10
+
+Enter Ip address to connect to the LED settings page after power on ESP32
 
 ### Example Sender create random led number and corresponding color:
 ```python
