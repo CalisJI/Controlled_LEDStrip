@@ -135,6 +135,7 @@ const char* htmlPage = R"=====(
 </html>
 )=====";
 #pragma endregion
+
 #pragma region LED Config
 #define LED_TYPE NEOPIXEL
 #define COLOR_ORDER RGB
