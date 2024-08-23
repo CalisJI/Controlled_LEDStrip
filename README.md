@@ -6,11 +6,11 @@
 + LED's color set by item value
 ### LED Settings:
 ![](/img/led1.jpg)
-- LEDs: Set LED number
-- Brightness: Set LED brightness
-- IP Address: default: 192.168.1.10
+- **LEDs:** Set LED number
+- **Brightness:** Set LED brightness
+- **IP Address:** *default:* 192.168.1.10
 
-Enter Ip address to connect to the LED settings page after power on ESP32
+- *Enter Ip address to connect to the LED settings page after power on ESP32*
 
 ### Example Sender create random led number and corresponding color:
 ```python
