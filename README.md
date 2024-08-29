@@ -1,4 +1,12 @@
 # Project to controll LED Strip using ESP32 via UPD protocol
+
+# Configuration:
++ Connect power to LED Strp
++ Connect Data wire to GPIO2 of ESP32
+
+![](/img/strip.png)
+
+
 ### Data frame RGB565:
 `uint16_t[]` ex: `[0xF800, 0x07E0, 0x001F, ...] hoặc [64896, 2016, 31, ...]`
 
@@ -10,7 +18,8 @@
 - **Brightness:** Set LED brightness
 - **IP Address:** *default:* 192.168.1.10
 
-- *Enter Ip address to connect to the LED settings page after power on ESP32*
+- *Power up ESP* 
+- *Enter Ip address on browser to connect to the LED settings page after power on ESP32*
 
 ### Example Sender create random led number and corresponding color:
 ```python
